@@ -1,0 +1,24 @@
+{
+    "name": "vue-ssr-demo",
+    "version": "1.0.0",
+    "scripts": {
+        "cp:dev": "shx cp node_modules/vue/dist/vue.js assets/vue.js",
+        "cp:prod": "shx cp node_modules/vue/dist/vue.min.js assets/vue.js",
+        "serve": "cross-env VUE_ENV=server nodemon --watch . --ext js,html server.js",
+        "dev": "npm-run-all cp:dev serve",
+        "prod": "npm-run-all cp:prod serve"
+    },
+    "author": "jasmine",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.16.4",
+        "vue": "^2.5.17",
+        "vue-server-renderer": "^2.5.17"
+    },
+    "devDependencies": {
+        "cross-env": "^5.2.0",
+        "nodemon": "^1.18.7",
+        "npm-run-all": "^4.1.5",
+        "shx": "^0.3.2"
+    }
+}
